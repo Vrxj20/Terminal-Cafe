@@ -17,6 +17,16 @@ class Order():
 
         self.items.append(coffee_obj)
 
+    def view_cart(self):
+
+        for index,item in enumerate(self.items,start=1):
+            print(f"{index}. {item.name} -${item.price}")
+
+    def get_total(self):
+
+        total = sum(item.price for item in self.items)
+        return total
+    
 
 
 
