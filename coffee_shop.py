@@ -26,8 +26,28 @@ class Order():
 
         total = sum(item.price for item in self.items)
         return total
-    
 
+class Main():
+
+        Menu = [
+
+            Coffee_shop("Americano", 2.0),
+            Coffee_shop("Espresso", 2.5),
+            Coffee_shop("Latte", 3.0),
+            Coffee_shop("Cappuccino", 3.5),
+        ]
+
+        order = Order()
+
+        while True:
+
+            print("\n 🧾---- Coffee Shop ----🧾 ")
+            for index,coffee in enumerate(Menu, start=1):
+                print(f"{index}. {coffee.name} -${coffee.price}")
+            print("5. View order List")
+            print("6. Checkout")
+            print("7. Exit the Coffee Shop APP")
+            choice = input("Enter your choice:  ")
 
 
 
