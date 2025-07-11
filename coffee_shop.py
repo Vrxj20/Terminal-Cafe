@@ -49,5 +49,13 @@ class Main():
             print("7. Exit the Coffee Shop APP")
             choice = input("Enter your choice:  ")
 
+        
+        if choice in ["1","2","3","4"]:
+                coffee_index = int(choice) - 1
+                selected = Menu[coffee_index]
+                order.add_item(selected)
+                print(f" Added {selected.name} to your order.")
+
+
 
 
