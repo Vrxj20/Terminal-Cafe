@@ -50,11 +50,32 @@ class Main():
             choice = input("Enter your choice:  ")
 
         
-        if choice in ["1","2","3","4"]:
+            if choice in ["1","2","3","4"]:
                 coffee_index = int(choice) - 1
                 selected = Menu[coffee_index]
                 order.add_item(selected)
                 print(f" Added {selected.name} to your order.")
+            
+            elif choice == "5":
+                print("\n ---- Your Cart ---- ")
+                if order.items == []:
+                    print("\n ---- Order list is empty select something ----")
+                else:
+                    order.view_cart()
+
+            elif choice == "6":
+                print("\n ---- Checkout --- ")
+                order.view_cart()
+                
+                x = input("\n Do you want to proceed to payment? (yes/no):  ")
+                if x.lower() == 'yes':
+                    print(f"Total Amount: ${order.get_total()}")
+                    print("\n Thank you for the order!!")   
+                elif x.lower() == 'no':
+                    print("Okay, returning to menu.")
+                else:
+                    print("\n Invalid Input ")  
+
 
 
 
