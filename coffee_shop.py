@@ -74,7 +74,18 @@ class Main():
                 elif x.lower() == 'no':
                     print("Okay, returning to menu.")
                 else:
-                    print("\n Invalid Input ")  
+                    print("\n Invalid Input ") 
+
+            elif choice == "7":
+                print("Visit Again !! Goodbye !!")
+                break
+
+            else:
+                print("\n Invalid Input , select from (1-7) ")
+
+
+if __name__ == "__Main__":
+    Main()
 
 
 
